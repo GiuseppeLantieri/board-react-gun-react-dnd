@@ -80,7 +80,6 @@ export default function KovanBoard() {
 
 	return (
 		<div>
-
 			<h1>{id}</h1>
 			<div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
 				<DragDropContext

@@ -9,6 +9,8 @@ import Home from "./Components/Home";
 import KovanBoard from "./Components/KovanBoard";
 
 import './App.css';
+import TakeNote from "./Components/TakeNote/TakeNote";
+import Navbar from "./Components/Navbar/Navbar";
 
 export default function App() {
 	return (
@@ -16,14 +18,12 @@ export default function App() {
 			<div>
 				<Switch>
 					<Route path="/kovan/:id">
-						<nav>
-							<ul>
-								<li>
-									<Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link>
-								</li>
-							</ul>
-						</nav>
+						<Navbar />
 						<KovanBoard />
+					</Route>
+					<Route path="/note/:id">
+						<Navbar />
+						<TakeNote />
 					</Route>
 					<Route path="/">
 						<Home />
